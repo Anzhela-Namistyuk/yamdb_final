@@ -57,6 +57,7 @@ class AdminOrReadOnlyPermission(permissions.BasePermission):
             return True
         if request.user.role == User.ADMIN or request.user.is_superuser:
             return True
+        return False
 
     def has_object_permission(self, request, view, obj):
         """Метод проверяет является ли пользователь

@@ -1,4 +1,3 @@
-from api_yamdb.settings import AUTH_FROM_EMAIL
 from django.contrib.auth import get_user_model
 from django.contrib.auth.tokens import PasswordResetTokenGenerator
 from django.core.mail import send_mail
@@ -10,8 +9,9 @@ from rest_framework.decorators import api_view, permission_classes
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import AccessToken
-from reviews.models import Category, Genre, Review, Title
 
+from api_yamdb.settings import AUTH_FROM_EMAIL
+from reviews.models import Category, Genre, Review, Title
 
 from .filters import Filter
 from .permissions import (AdminOnlyPermission,

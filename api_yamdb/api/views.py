@@ -10,7 +10,8 @@ from rest_framework.pagination import PageNumberPagination
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import AccessToken
 
-from api_yamdb.settings import AUTH_FROM_EMAIL
+from ..api_yamdb.settings import AUTH_FROM_EMAIL
+from ..reviews.models import Category, Genre, Review, Title
 from .filters import Filter
 from .permissions import (AdminOnlyPermission,
                           AdminOrModeratorOrAuthorPermission,
@@ -20,7 +21,6 @@ from .serializers import (AuthCodeSerializer, CategorySerializer,
                           ProfileSerializer, ReviewSerializer,
                           SendAuthCodeSerializer, TitleCreateSerializer,
                           TitleListSerializer, UserSerializer)
-from reviews.models import Category, Genre, Review, Title
 
 User = get_user_model()
 

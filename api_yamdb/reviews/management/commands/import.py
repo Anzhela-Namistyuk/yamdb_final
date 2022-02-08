@@ -4,10 +4,10 @@ import csv
 import os
 from glob import glob
 
+from api_yamdb.reviews.models import (Category, Comment, Genre, GenreTitle,
+                                      Review, Title)
+from api_yamdb.users.models import User
 from django.core.management.base import BaseCommand
-from users.models import User
-
-from reviews.models import Category, Comment, Genre, GenreTitle, Review, Title
 
 
 class Command(BaseCommand):

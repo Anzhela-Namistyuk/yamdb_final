@@ -2,9 +2,9 @@ from __future__ import print_function
 
 import csv
 import os
-from django.core.management.base import BaseCommand
 from glob import glob
 
+from django.core.management.base import BaseCommand
 
 from api_yamdb.reviews.models import (Category, Comment, Genre, GenreTitle,
                                       Review, Title)

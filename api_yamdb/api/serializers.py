@@ -1,9 +1,7 @@
 from django.contrib.auth import get_user_model
-
 from rest_framework import serializers
 from rest_framework.relations import SlugRelatedField
 from rest_framework.validators import UniqueValidator
-
 from reviews.models import Category, Comment, Genre, Review, Title
 
 User = get_user_model()

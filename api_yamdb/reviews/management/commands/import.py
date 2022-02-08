@@ -2,12 +2,13 @@ from __future__ import print_function
 
 import csv
 import os
+from django.core.management.base import BaseCommand
 from glob import glob
+
 
 from api_yamdb.reviews.models import (Category, Comment, Genre, GenreTitle,
                                       Review, Title)
 from api_yamdb.users.models import User
-from django.core.management.base import BaseCommand
 
 
 class Command(BaseCommand):

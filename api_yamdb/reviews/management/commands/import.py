@@ -1,12 +1,15 @@
 from __future__ import print_function
 
-import csv
 import os
-from glob import glob
+import csv
+
 
 from django.core.management.base import BaseCommand
-from reviews.models import Category, Comment, Genre, GenreTitle, Review, Title
+
+from reviews.models import Category, Genre, Comment, Review, Title, GenreTitle
 from users.models import User
+
+from glob import glob
 
 
 class Command(BaseCommand):

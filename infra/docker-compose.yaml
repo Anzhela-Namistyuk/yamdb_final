@@ -17,13 +17,13 @@ services:
     image: anzhelanamistyuk/api_yamdb:latest
     restart: always
     volumes:
-      # Контейнер web будет работать с данными, хранящиеся в томе static_value, 
+      # Контейнер web будет работать с данными, хранящиеся в томе static_value,
       # через свою директорию /app/static/
       - static_value:/app/static/
-      # Данные, хранящиеся в томе media_value, будут доступны в контейнере web 
+      # Данные, хранящиеся в томе media_value, будут доступны в контейнере web
       # через директорию /app/media/
       - media_value:/app/media/
-    # «зависит от», 
+    # «зависит от»,
     depends_on:
       - db
     env_file:
